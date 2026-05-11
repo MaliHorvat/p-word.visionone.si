@@ -27,7 +27,9 @@ jobs:
 
       - name: Run make to rebuild templates
         working-directory: docker
-        run: make
+        run: |
+          chmod +x render_template
+          make
 
       - name: Check for unstaged changes
         working-directory: docker
