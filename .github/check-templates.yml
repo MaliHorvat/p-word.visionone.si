@@ -26,6 +26,7 @@ jobs:
       # End Checkout the repo
 
       - name: Run make to rebuild templates
+        working-directory: docker
         run: |
           chmod +x render_template
           make
